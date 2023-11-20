@@ -16,3 +16,10 @@ add_custom_command(
     COMMAND ${CMAKE_COMMAND} -E copy_directory
     "${CMAKE_SOURCE_DIR}/1-20/test files" "$<TARGET_FILE_DIR:exercise1_20>/test files"
 )
+
+add_executable(exercise1_21 "1-21/main.c")
+add_custom_command(
+    TARGET exercise1_21 POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    "${CMAKE_SOURCE_DIR}/1-21/test files" "$<TARGET_FILE_DIR:exercise1_21>/test files"
+)
